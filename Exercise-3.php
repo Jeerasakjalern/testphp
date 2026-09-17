@@ -7,12 +7,13 @@
 </head>
 <body>
         <?php
-            function test($temp1, $temp2) {
-            return $temp1 < 0 && $temp2 > 100 || $temp2 < 0 && $temp1 > 100;
+            function test($x, $y) {
+            return ($x <= 20 || $y >= 50) || ($y < 20 || $x > 50);
             }
-            var_dump(test(120,-1));
-            var_dump(test(-1,120));
-            var_dump(test(2,120));
+            var_dump(test(20,84));
+            var_dump(test(14,50));
+            var_dump(test(11,45));
+            var_dump(test(25,40));
         ?>
 </body>
 </html>
